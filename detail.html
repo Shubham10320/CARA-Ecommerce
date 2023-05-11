@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #product_details {
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+
+        #mainproductbox {
+            margin: auto;
+            display: flex;
+            width: 100%;
+
+        }
+
+        #productbox1 {
+            width: 50%;
+            padding: 30px;
+        }
+
+        #productbox1 img {
+            width: 100%;
+            height: 35rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 15px;
+
+        }
+
+        #productbox2 {
+            width: 50%;
+            padding: 10px;
+        }
+
+        #productbox2 h2,
+        .stardivs,
+        .detailproductmrp,
+        .detailaddbtn,
+        .detailsofproduct,
+        #incdec {
+            margin-left: 20px;
+
+        }
+
+        #productbox2 h2 {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        /* #productbox2 .stardivs{
+            margin-top: -2rem;
+        } */
+        #productbox2 .stardivs .stars {
+            height: 2.1rem;
+            width: 2.1rem;
+        }
+
+        .detailprice {
+            display: flex;
+            gap: 2.5rem;
+            font-size: 2rem;
+
+        }
+
+        .detailprice .detailproductmrp {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .detailaddbtn {
+            width: 60%;
+            border-radius: 30px;
+            border-color: #088178;
+            background-color: #088178;
+            padding: 15px;
+            color: white;
+        }
+
+        .detailsofproduct {
+            font-size: 16px;
+            margin-top: 60px;
+            font-weight: 600;
+        }
+
+        #incdec {
+            display: flex;
+            width: 150px;
+            margin-bottom: 10px;
+            height: 35px;
+            background-color: #c4c9c7;
+        }
+
+        .priceincdec {
+            width: 20px;
+            margin: auto;
+            border: 2xp solid #088178;
+            padding: 10px;
+            font-size: 18px;
+            gap: 10px;
+            text-align: center;
+        }
+
+        @media (max-width:799px) {
+            #product_details {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            #mainproductbox {
+                margin: auto;
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        @media (max-width:477px) {
+            #product_details {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            #mainproductbox {
+                margin: auto;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            #productbox2,
+            #productbox1 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <a id="main-logo" href="index.html"><img src="img/logo.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="product.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html" id="userlogin">Login <img src="img/person.png" class="shopping-logo"
+                            id="bag-logo" alt="login/signup logo"></a></li>
+                <li id="cart-disable"><a href="#"><img class="shopping-logo" src="img/shopping.png"
+                            alt="shopping-logo"></a><span id="count">0</span></li>
+
+                <a href="#"><img id="close" src="img/close.png" alt="close"></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><img class="shopping-logo" src="img/shopping.png" alt="shopping-logo"></a>
+            <!-- <a href="login.html"><img src="img/person.png" class="shopping-logo" alt="login/signup logo"></a> -->
+            <img src="img/menu.png" id="bar" alt="menu.logo" class="shopping-logo">
+        </div>
+    </section>
+
+    <section>
+        <div id="product_details">
+
+        </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="">
+            <h6>Free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>NEW FOOTWEAR COLLECTIONS</h2>
+            <h3>Spring / Summer 2022</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>T-SHIRTS</h2>
+            <h3>Nes Trendy Prints</h3>
+        </div>
+    </section>
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/logo.png" alt="" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, Mumbai India</p>
+            <p><Strong>Phone: </Strong> +91 12345 67980</p>
+            <p><Strong>Hours: </Strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follw us</h4>
+
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Infromation</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Trach My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023, Shubham Chaubey - HTML CSS JAVASCRIPT PROJECT Ecommerc3 </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script src="home.js"></script>
+
+<script>
+
+    var items = JSON.parse(localStorage.getItem("des")) || []
+    displayData()
+
+    var increment = 0;
+    var decrement = 0;
+
+    function displayData() {
+
+        items.map(function (elem) {
+            var maindiv = document.createElement("div");
+            maindiv.setAttribute('id', "mainproductbox")
+
+
+
+            var div1 = document.createElement("div");
+            div1.setAttribute('id', "productbox1")
+
+            var img = document.createElement("img")
+            img.setAttribute("src", elem.Image);
+            img.setAttribute("class", "detailImage")
+
+            var div2 = document.createElement("div");
+            div2.setAttribute('id', "productbox2")
+            var h2 = document.createElement("h2")
+            h2.setAttribute("class", "name")
+            h2.textContent = elem.name
+
+            var star = document.createElement("div");
+            star.setAttribute("class", "stardivs")
+            var star1 = document.createElement("img");
+            star1.setAttribute("src", elem.star1)
+            star1.setAttribute("class", "stars")
+
+            var star2 = document.createElement("img");
+            star2.setAttribute("src", elem.star2)
+            star2.setAttribute("class", "stars")
+
+            var star3 = document.createElement("img");
+            star3.setAttribute("src", elem.star3)
+            star3.setAttribute("class", "stars")
+
+            var star4 = document.createElement("img");
+            star4.setAttribute("src", elem.star4)
+            star4.setAttribute("class", "stars")
+
+            var star5 = document.createElement("img");
+            star5.setAttribute("src", elem.star5)
+            star5.setAttribute("class", "stars")
+
+            var pricebox = document.createElement("div")
+            pricebox.setAttribute("class", "detailprice")
+            var mrp = document.createElement("p")
+            mrp.setAttribute("class", "detailproductmrp")
+            mrp.textContent = "$" + elem.mrp
+
+            var price = document.createElement("p")
+            price.setAttribute("class", "detailproductprice")
+            price.textContent = "$" + elem.price
+
+            var btn = document.createElement("button")
+            btn.setAttribute("class", "detailaddbtn")
+            btn.textContent = "Add to cart"
+            btn.addEventListener("click", () => {
+                product(elem);
+            })
+
+
+            var des = document.createElement("p")
+            des.setAttribute("class", "detailsofproduct")
+            des.textContent = elem.description;
+
+            star.append(star1, star2, star3, star4, star5)
+            pricebox.append(mrp, price)
+            div1.append(img);
+            div2.append(h2, star, pricebox, btn, des)
+            maindiv.append(div1, div2)
+            document.querySelector("#product_details").append(maindiv)
+
+
+
+        })
+    }
+
+   
+    // here im doing count of product and showing beside to cart logo on header and storing data for cart page ==============================
+// ===========================================================================
+// var cartDetails=JSON.parse(localStorage.getItem('cartDetails')) || [];
+var count=JSON.parse(localStorage.getItem("countItems"))|| 0;
+// function cart(elem){
+//     cartDetails.push(elem);
+//     count++;
+//     localStorage.setItem("countItems", count);
+//     localStorage.setItem("cartDetails", JSON.stringify(cartDetails))
+// }
+
+ document.getElementById('count').textContent=count;
+
+</script>
